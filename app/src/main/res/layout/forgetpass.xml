@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
 
 
     <LinearLayout
-        android:layout_width="408dp"
-        android:layout_height="729dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-       >
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -25,8 +26,8 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgot password"
-                android:textSize="80px"
+                android:text="@string/forgot_password"
+                android:textSize="30dp"
                 android:fontFamily="sans-serif-black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +37,7 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Please enter your registered email to reset your password"
+                android:text="@string/please_enter_your_registered_email_to_reset_your_password"
                 android:textSize="40px"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +47,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/formulaire"
+            android:id="@+id/formulaire1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -60,7 +61,7 @@
                 android:layout_marginHorizontal="18dp"
                 android:drawableStart="@drawable/mail"
                 android:drawablePadding="15dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:layout_marginTop="20dp"
                 android:padding="15dp"
                 android:background="@drawable/inputborder"
@@ -88,7 +89,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="422dp" />
+                tools:layout_editor_absoluteY="422dp"
+                tools:ignore="VisualLintButtonSize" />
         </LinearLayout>
 
 

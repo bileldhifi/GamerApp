@@ -13,18 +13,18 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="238dp"
-            android:layout_height="172dp"
+            android:layout_width="154dp"
+            android:layout_height="105dp"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_logo"
-            tools:layout_editor_absoluteY="16dp"
-            android:layout_marginTop="20dp"/>
+            tools:layout_editor_absoluteY="16dp" />
 
         <LinearLayout
-            android:id="@+id/formulaire"
+            android:id="@+id/formulaire1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -134,6 +134,8 @@
             android:layout_gravity="center"
             android:layout_marginHorizontal="30dp">
             <TextView
+                android:clickable="true"
+                android:id="@+id/policy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="By registering you agree to our Terms Conditions and Privacy Policy"

@@ -2,4 +2,7 @@
     <string name="app_name">Gamer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="please_enter_your_registered_email_to_reset_your_password">Please enter your registered email to reset your password</string>
+    <string name="email">Email</string>
 </resources>
