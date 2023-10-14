@@ -8,15 +8,31 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Gamer"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Gamer">
+        <activity
+            android:name=".recoveryPage"
+            android:exported="false" />
+        <activity
+            android:name=".authPage"
+            android:exported="false" />
+        <activity
+            android:name=".registrePage"
+            android:exported="false" />
+        <activity
+            android:name=".forgetPassPage"
+            android:exported="false" />
+        <activity
+            android:name=".loginPage"
+            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
