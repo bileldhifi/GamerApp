@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamer">
         <activity
+            android:name=".homeActivity"
+            android:exported="false" />
+        <activity
             android:name=".recoveryPage"
             android:exported="false" />
         <activity
@@ -26,7 +29,6 @@
         <activity
             android:name=".loginPage"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
