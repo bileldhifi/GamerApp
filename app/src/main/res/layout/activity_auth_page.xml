@@ -42,7 +42,7 @@
             android:gravity="center"
             >
             <EditText
-                android:id="@+id/oneDigitEditText1"
+                android:id="@+id/digit1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
@@ -52,7 +52,7 @@
                 android:textSize="50dp"
                 />
             <EditText
-                android:id="@+id/oneDigitEditText2"
+                android:id="@+id/digit2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
@@ -64,7 +64,7 @@
                 />
 
             <EditText
-                android:id="@+id/oneDigitEditText3"
+                android:id="@+id/digit3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -75,7 +75,7 @@
                 android:padding="20dp"/>
 
             <EditText
-                android:id="@+id/oneDigitEditText4"
+                android:id="@+id/digit4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
@@ -93,6 +93,7 @@
             android:layout_marginVertical="20dp">
 
             <Button
+                android:id="@+id/bntVerify"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FF0055"
@@ -126,7 +127,7 @@
                 tools:layout_editor_absoluteY="495dp"
                 />
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/resendCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Resend code"

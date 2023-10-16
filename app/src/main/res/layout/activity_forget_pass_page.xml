@@ -80,17 +80,18 @@
             android:layout_marginVertical="20dp">
 
             <Button
+                android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FF0055"
                 android:gravity="center"
-                android:text="Login"
+                android:text="Submit"
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="422dp"
-                tools:ignore="VisualLintButtonSize" />
+                tools:ignore="VisualLintButtonSize"
+                tools:layout_editor_absoluteY="422dp" />
         </LinearLayout>
 
 

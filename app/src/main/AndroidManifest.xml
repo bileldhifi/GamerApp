@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamer">
         <activity
-            android:name=".homeActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".recoveryPage"

@@ -31,16 +31,25 @@ class MainActivity : AppCompatActivity() {
             val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
             snack.show()
         }
-        btn1.setOnClickListener {
-            val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
-            snack.show()
+
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        btnLogin.setOnClickListener() {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            showToast("Button clicked !")
         }
 
-        val btnLogin = findViewById<View>(R.id.btnForgetPass)
-        btnLogin.setOnClickListener() {
+
+        val btnForgetPass = findViewById<View>(R.id.btnForgetPass)
+        btnForgetPass.setOnClickListener() {
             val intent = Intent(this, forgetPassPage::class.java)
             startActivity(intent)
             showToast("Button clicked !")
+        }
+
+        btn1.setOnClickListener {
+            val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
+            snack.show()
         }
 
         val btnregistre = findViewById<View>(R.id.btnregistre)
