@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.android.material.snackbar.Snackbar
@@ -31,25 +32,16 @@ class MainActivity : AppCompatActivity() {
             val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
             snack.show()
         }
-
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
-        btnLogin.setOnClickListener() {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            showToast("Button clicked !")
+        btn1.setOnClickListener {
+            val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
+            snack.show()
         }
-
 
         val btnForgetPass = findViewById<View>(R.id.btnForgetPass)
         btnForgetPass.setOnClickListener() {
             val intent = Intent(this, forgetPassPage::class.java)
             startActivity(intent)
             showToast("Button clicked !")
-        }
-
-        btn1.setOnClickListener {
-            val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
-            snack.show()
         }
 
         val btnregistre = findViewById<View>(R.id.btnregistre)
@@ -65,7 +57,31 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }*/
 
-}
+        // Input constraint ///
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+     val email = findViewById<EditText>(R.id.email)
+     val pass = findViewById<EditText>(R.id.password)
+     val emailText = email.text.toString()
+     val passText = pass.text.toString()
+        val errorPass = findViewById<View>(R.id.errorPass)
+
+        btnLogin.setOnClickListener(){
+            if (isPasswordValid(passText)) {
+            startActivity(Intent(this, HomeActivity::class.java))
+            errorPass.visibility = View.GONE }
+            else
+            {
+                errorPass.visibility = View.VISIBLE
+            }
+        }
+
+    }
+
+    private fun isPasswordValid(password: String): Boolean {
+        val hasUppercase = password.any { it.isUpperCase() }
+        val hasDigit = password.any { it.isDigit() }
+        return hasUppercase && hasDigit
+    }
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }

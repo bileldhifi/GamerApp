@@ -47,23 +47,40 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="216dp" />
 
+            <TextView
+                android:id="@+id/errorEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="17dp"
+                android:text="Enter a valid Email"
+                android:textColor="#FF0000" />
+
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email1"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/inputborder"
                 android:drawableStart="@drawable/pass"
                 android:drawableEnd="@drawable/hide"
                 android:drawablePadding="15dp"
                 android:hint="Password"
-                android:layout_marginTop="20dp"
-                android:padding="15dp"
-                android:background="@drawable/inputborder"
                 android:inputType="textEmailAddress"
+                android:padding="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.514"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="216dp" />
+
+            <TextView
+                android:id="@+id/errorPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="17dp"
+                android:textColor="#FF0000"
+                android:visibility="invisible"
+                android:text="Password must contain at least one uppercase letter and one number" />
         </LinearLayout>
 
         <LinearLayout
