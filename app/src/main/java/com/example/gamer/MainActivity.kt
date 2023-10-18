@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             showToast("Button clicked !")
         }
 
+
         val btnregistre = findViewById<View>(R.id.btnregistre)
         btnregistre.setOnClickListener() {
             val intent = Intent(this, registrePage::class.java)
@@ -72,6 +73,8 @@ class MainActivity : AppCompatActivity() {
             else
             {
                 errorPass.visibility = View.VISIBLE
+                startActivity(Intent(this, HomeActivity::class.java))
+
             }
         }
 
