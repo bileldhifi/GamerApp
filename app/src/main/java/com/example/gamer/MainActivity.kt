@@ -22,18 +22,18 @@ class MainActivity : AppCompatActivity() {
             installSplashScreen()
             delay(2000)
         }
-       setContentView(R.layout.activity_loginpage)
+        setContentView(R.layout.activity_loginpage)
 
         val btn = findViewById<View>(R.id.buttongoogle)
         val btn1 = findViewById<View>(R.id.buttonfacebook)
 
 
         btn.setOnClickListener {
-            val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
+            val snack = Snackbar.make(it, "Comming soon :)", Snackbar.LENGTH_LONG)
             snack.show()
         }
         btn1.setOnClickListener {
-            val snack = Snackbar.make(it,"Comming soon :)",Snackbar.LENGTH_LONG)
+            val snack = Snackbar.make(it, "Comming soon :)", Snackbar.LENGTH_LONG)
             snack.show()
         }
 
@@ -52,26 +52,27 @@ class MainActivity : AppCompatActivity() {
             showToast("Button clicked !")
         }
 
-      /*  val btnSubmit = findViewById<View>(R.id.btnSubmit)
+        /*  val btnSubmit = findViewById<View>(R.id.btnSubmit)
         btnSubmit.setOnClickListener() {
             val intent = Intent(this, loginPage::class.java)
             startActivity(intent)
         }*/
 
         // Input constraint ///
+
         val btnLogin = findViewById<Button>(R.id.btnLogin)
-     val email = findViewById<EditText>(R.id.email)
-     val pass = findViewById<EditText>(R.id.password)
-     val emailText = email.text.toString()
-     val passText = pass.text.toString()
+        val email = findViewById<EditText>(R.id.email)
+        val pass = findViewById<EditText>(R.id.password)
+        val emailText = email.text.toString()
+        val passText = pass.text.toString()
         val errorPass = findViewById<View>(R.id.errorPass)
 
-        btnLogin.setOnClickListener(){
+
+        btnLogin.setOnClickListener {
             if (isPasswordValid(passText)) {
-            startActivity(Intent(this, HomeActivity::class.java))
-            errorPass.visibility = View.GONE }
-            else
-            {
+                startActivity(Intent(this, HomeActivity::class.java))
+                errorPass.visibility = View.GONE
+            } else {
                 errorPass.visibility = View.VISIBLE
                 startActivity(Intent(this, HomeActivity::class.java))
 
@@ -85,6 +86,9 @@ class MainActivity : AppCompatActivity() {
         val hasDigit = password.any { it.isDigit() }
         return hasUppercase && hasDigit
     }
+
+                    // END input constraint //
+
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
