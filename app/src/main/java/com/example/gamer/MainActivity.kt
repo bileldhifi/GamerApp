@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -58,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }*/
 
-        // Input constraint ///
+                               // Input constraint ///
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val email = findViewById<EditText>(R.id.email)
@@ -67,28 +69,11 @@ class MainActivity : AppCompatActivity() {
         val passText = pass.text.toString()
         val errorPass = findViewById<View>(R.id.errorPass)
 
-
         btnLogin.setOnClickListener {
-            if (isPasswordValid(passText)) {
                 startActivity(Intent(this, HomeActivity::class.java))
-                errorPass.visibility = View.GONE
-            } else {
-                errorPass.visibility = View.VISIBLE
-                startActivity(Intent(this, HomeActivity::class.java))
-
-            }
         }
-
-    }
-
-    private fun isPasswordValid(password: String): Boolean {
-        val hasUppercase = password.any { it.isUpperCase() }
-        val hasDigit = password.any { it.isDigit() }
-        return hasUppercase && hasDigit
-    }
-
                     // END input constraint //
-
+    }
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
